@@ -2,9 +2,8 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
-const API_KEY = 'YOUR_ANTHROPIC_API_KEY'; // paste your key here
-const PORT = 3000;
-
+const API_KEY = process.env.ANTHROPIC_API_KEY;
+const PORT = process.env.PORT || 3000;
 http.createServer((req, res) => {
 
   // Serve the HTML page
